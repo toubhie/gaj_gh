@@ -1,0 +1,44 @@
+<body>
+
+    <aside>
+        <div class="flex_col side_nav">
+            
+            <div class="close_nav_container">
+                <div class="flex_row_center_all dash_close_nav">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="dashboard_logo">
+                <img src="/images/logo.png" alt="">
+            </div>
+            <div class="dashboard_links">
+                <a href="/recruiters/dashboard" class="<%= view == 'dashboard' ? 'active' : ''%>">
+                    <i class="fab fa-buromobelexperte"></i> Dashboard
+                </a>
+                <a href="/recruiters/post-a-job" class="<%= view == 'post-a-job' ? 'active' : ''%>">
+                    <i class="far fa-file-alt"></i> Post a Job
+                </a>
+                <a href="/recruiters/created-jobs" class="<%= view == 'created-jobs' ? 'active' : ''%>">
+                    <i class="far fa-copy"></i> Created Jobs
+                </a>
+                <a href="/recruiters/saved-candidates" class="<%= view == 'saved-candidates' ? 'active' : ''%>">
+                    <i class="far fa-heart"></i> Saved Candidates
+                </a>
+                <a href="/recruiters/assessments" class="<%= view == 'assessments' ? 'active' : ''%>">
+                    <i class="fas fa-chalkboard-teacher"></i> Assessments
+                </a>
+                <a href="/recruiters/talent-pool" class="<%= view == 'talent-pool' ? 'active' : ''%>">
+                    <i class="fas fa-users"></i> Talent Pool
+                </a>
+                <a href="/recruiters/interviews" class="<%= view == 'interviews' ? 'active' : ''%>">
+                    <i class="far fa-comments"></i> Interviews
+                </a>
+                <a href="/recruiters/settings" class="<%= view == 'settings' ? 'active' : ''%>">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="/auth/logout">
+                    <i class="fas fa-sign-out-alt" style="color: red;"></i> Logout
+                </a>
+            </div>
+        </div>
+    </aside>

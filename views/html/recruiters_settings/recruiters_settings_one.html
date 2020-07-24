@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../script/css/main.css">
+    <link rel="stylesheet" href="../script/css/responsiveness.css">
+    <link rel="stylesheet" href="../scripts/css/animation.css">
+    <link rel="stylesheet" href="../script/css/dashboard.css">
+    
+    <title>Dashborad</title>
+
+  </head>
+<body>
+
+    <aside>
+        <div class="flex_col side_nav">
+
+            <div class="dashboard_logo">
+                <img src="../utils/images/logo2.png" alt="">
+            </div>
+            <div class="dashboard_links">
+                <a href="#" class="active">
+                    <i class="fab fa-buromobelexperte"></i> Dashborad
+                </a>
+                <a href="#">
+                    <i class="far fa-user"></i> Profile
+                </a>
+                <a href="#">
+                    <i class="far fa-heart"></i> Saved Jobs
+                </a>
+                <a href="#">
+                    <i class="far fa-file-alt"></i> Recommended Jobs
+                </a>
+                <a href="#">
+                    <i class="fas fa-cog"></i> Settings
+                </a>
+            </div>
+
+        </div>
+    </aside>
+
+    <section>
+        <div class="dashboard_body">
+
+            <header>
+
+            <div class="flex_row_justify_between dasboard_nav">
+
+                <div class="flex_row dash_nav_input_group">
+                    <input type="text" name="" id="" placeholder="Search">
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="flex_row_align_center">
+
+                    <div class="notification_bell">
+
+                        <i class="far fa-bell"></i>
+                        <div class="bell_red"></div>
+
+                    </div>
+
+                    <div class="flex_row_align_center user_info">
+                        
+                        <div class="user_image">
+                            <img src="../utils/images/userImg.png" alt="">
+                        </div>
+                        <div class="user_name">
+                            <span>
+                                Audrey Nguyen
+                            </span>
+                        </div>
+                        <div class="user_dropdown">
+                            <i class="fas fa-angle-down"></i>                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </header>
+            
+
+            <section class="settings_section">
+
+                <div class="flex_row_justify_between">
+
+                    <div class="settings_toggle">
+
+                        <div class="site_row vvvv">
+
+                        <div class="flex_row settings_toggle_each active" id="personal_profile_settings_rec">
+                            <div class="settings_icon">
+                                    <i class="far fa-user"></i>
+                            </div>
+                            <div class="settings_title">
+                                <p>
+                                    Personal
+                                </p>
+                                <p>
+                                    Customize your profile
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex_row settings_toggle_each" id="password_profile_settings_rec">
+                                <div class="settings_icon">
+                                        <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="settings_title">
+                                    <p>
+                                        Password
+                                    </p>
+                                    <p>
+                                        Secure your account fast
+                                    </p>
+                                </div>
+                        </div>
+                        <!--  -->
+                        <div class="flex_row settings_toggle_each" id="company_profile_settings_rec">
+                            <div class="settings_icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="settings_title">
+                                <p>
+                                    Company Profile
+                                </p>
+                                <p>
+                                    Edit company profile
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex_row settings_toggle_each" id="team_profile_settings_rec">
+                                <div class="settings_icon">
+                                    <i class="far fa-user"></i>
+                                </div>
+                                <div class="settings_title">
+                                    <p>
+                                        Invite Team
+                                    </p>
+                                    <p>
+                                        Invite your team mates
+                                    </p>
+                                </div>
+                        </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="settings_form">
+
+                        <div class="site_row update_profile" id="profile_account_setting_rec">
+
+                            <div class="site_row">
+
+                                <div class="add_image">
+
+                                        <i class="far fa-user"></i>
+                                        <button>
+                                                <i class="fas fa-plus"></i>
+                                        </button>                                    
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input_div">
+                                        <label for="">Last Name</label>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <div class="input_div">
+                                                <label for="">First Name</label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input_div">
+                                            <label for="">Email Address</label>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                            <div class="input_div">
+                                                    <label for="">Phone Number</label>
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                    </div>
+                                </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input_div">
+                                    <label for=""> Address </label>
+                                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="row pt-4">
+                                <div class="col-md-6 col-offset-6 mx-auto text-center">
+                                    <button class="normal_btn">Update Profile</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="site_row change_password" id="password_account_setting_rec">
+    
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input_div">
+                                            <label for=""> Current Password </label>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input_div">
+                                                <label for=""> New Password </label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input_div">
+                                                    <label for=""> Confirm Password </label>
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                        
+    
+                                <div class="row pt-4">
+                                    <div class="col-md-6 col-offset-6 mx-auto text-center">
+                                        <button class="normal_btn"> Change Password </button>
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                            <div class="site_row company_profile" id="company_account_setting_rec">
+
+                                <div class="flex_row_align_center_justify_start">
+    
+                                    <div class="add_image">
+    
+                                            <i class="far fa-user"></i>
+                                            <button>
+                                                    <i class="fas fa-plus"></i>
+                                            </button>                                    
+                                        
+                                    </div>
+
+                                    <div class="pl-4 comp_logo_txt">
+                                        <p>
+                                            Upload Company Logo
+                                        </p>
+                                    </div>
+    
+                                </div>
+    
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input_div">
+                                            <label for="">Company Name</label>
+                                            <input type="text" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input_div">
+                                                <label for=""> Industry</label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="input_div">
+                                                        <label for=""> Location</label>
+                                                        <input type="text" name="" id="">
+                                                    </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input_div">
+                                                <label for="">Company Website</label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="input_div">
+                                                        <label for="">Instagram</label>
+                                                        <input type="text" name="" id="">
+                                                    </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input_div">
+                                                <label for="">Facebook</label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="input_div">
+                                                        <label for="">Linkedin</label>
+                                                        <input type="text" name="" id="">
+                                                    </div>
+                                        </div>
+                                    </div>
+    
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input_div">
+                                        <label for=""> Describe your company </label>
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row pt-4">
+                                    <div class="col-md-6 col-offset-6 mx-auto text-center">
+                                        <button class="normal_btn">Update Profile</button>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        
+                            <div class="site_row invite_team" id="intTeam_account_setting_rec">
+
+                                <div class="site_row invite_mem_head">
+                                    <p>
+                                            Invite Team Members
+                                    </p>                                   
+    
+                                </div>
+    
+                                
+    
+                                <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="input_div">
+                                                <label for=""> Team Member’s Email Address</label>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <div class="input_div">
+                                                        <label for=""> Access Level</label>
+                                                        <select name="" form="">
+                                                                <option value="volvo">2001</option>
+                                                                <option value="saab">2002</option>
+                                                                <option value="opel">2003</option>
+                                                                <option value="audi">2004</option>
+                                                        </select>
+                                                    </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="input_div">
+                                                    <label for=""> Team Member’s Email Address</label>
+                                                    <input type="text" name="" id="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                    <div class="input_div">
+                                                            <label for=""> Access Level</label>
+                                                            <select name="" form="">
+                                                                    <option value="volvo">2001</option>
+                                                                    <option value="saab">2002</option>
+                                                                    <option value="opel">2003</option>
+                                                                    <option value="audi">2004</option>
+                                                            </select>
+                                                        </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="site_row text-center add_member_link_div">
+                                            <a href="#" id="add_new_team">
+                                                    Add New Team Member
+                                            </a>
+                                        </div>
+
+                                 
+    
+                                <div class="row pt-4">
+                                    <div class="col-md-6 col-offset-6 mx-auto text-center">
+                                        <button class="normal_btn">Invite</button>
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                            <div class="site_row add_team_member" id="addTeam_account_setting_rec">
+
+                                    <div class="site_row invite_mem_head">
+                                        <p>
+                                                Invite Team Members
+                                        </p>                                   
+        
+                                    </div>
+
+                                    
+                                    <div class="flex_row_align_end_n_justify_between invited_members">
+
+                                        <div>
+                                            <div class="site_row role_mail_head">
+                                                <p>
+                                                        Email Address
+                                                </p>
+                                            </div>
+                                            <div class="site_row row_mail_txt">
+                                                <p>
+                                                        tope@ c-ileasing.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                                <div class="site_row role_level">
+                                                    <p>
+                                                            Access Level
+                                                    </p>
+                                                </div>
+                                                <div class="site_row role_name">
+                                                    <p>
+                                                            admin
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex_row desc_actions">
+                                                    <div class="mr-3">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                    </div>
+                                                    <div >
+                                                            <i class="far fa-trash-alt"></i>
+                                                    </div>
+                                                </div>
+
+                                    </div>
+                                    
+        
+                                    
+    
+                                        <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="input_div">
+                                                        <label for=""> Team Member’s Email Address</label>
+                                                        <input type="text" name="" id="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <div class="input_div">
+                                                                <label for=""> Access Level</label>
+                                                                <select name="" form="">
+                                                                        <option value="volvo">Admin</option>
+                                                                        <option value="saab">2002</option>
+                                                                        <option value="opel">2003</option>
+                                                                        <option value="audi">2004</option>
+                                                                </select>
+                                                            </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="site_row text-center add_member_link_div">
+                                                <a href="#">
+                                                        Add New Team Member
+                                                </a>
+                                            </div>
+    
+                                     
+        
+                                    <div class="row pt-4">
+                                        <div class="col-md-6 col-offset-6 mx-auto text-center">
+                                            <button class="normal_btn">Invite</button>
+                                        </div>
+                                    </div>
+        
+                                </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+          
+
+        </div>
+    </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../script/js/jQuery.min.js"></script>    
+    <script src="../script/js/main.js"></script>
+    
+</body>
+</html>

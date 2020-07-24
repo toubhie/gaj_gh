@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Upload Example</title>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+<script type="text/javascript" src="../auth/paystack.js"></script>
+</head>
+<body>
+<form action="/resume/" enctype="multipart/form-data" method="post">
+    <input type="file" name="upload" multiple>
+    <input type="submit" value="Upload">
+</form>
+
+<a href="/passport/auth/facebook">Login with Facebook</a>
+<p><a href="/passport/auth/linkedin">Login with LinkedIn</a></p>
+<p><a href="/passport/auth/google">Login with Google</a></p>
+
+
+
+<form>   
+    <button type="button" onclick="processPaystackGateway()"> Pay </button> 
+  </form>
+</body>
+
+<script>
+    function processPaystackGateway(){
+        var handler = PaystackPop.setup({
+            key: 'pk_test_7fb7a6fdf32b92f648620e46697b79810c7ad291',
+            email: 'tobiwily@yahoo.com',
+            amount: 1234567,
+            currency: "NGN",
+            metadata: {
+                custom_fields: [
+                    {
+                        display_name: "Mobile Number",
+                        variable_name: "mobile_number",
+                        value: '080123456789'
+                    }
+                ]
+            },
+            callback: function(response){
+                alert('success. transaction ref is ' + response.reference);
+                
+                processTransactionResponse(response);
+            },
+            onClose: function(){
+                alert('window closed');
+            }
+        });
+        handler.openIframe();
+    }
+
+    function processTransactionResponse(response){
+        console.log(response);
+    }
+</script>   
+
+
+
+</html>

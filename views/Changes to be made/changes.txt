@@ -1,0 +1,18 @@
+companies.html { images and content of each step under HOW IT WORKS } DONE
+
+candidates.html { images and content above 'Watch how it works' section } DONE
+
+job_desc.html { Added new list to the list of what you will just above the footer }
+
+jobs.html { Added new list to the list of benefits just above the footer }
+
+user_dashboard.html { Added content to the cards }
+
+User_profile.html { Added progess bar and pushed the upload resume button to the right } DONE
+
+main_profile.html { Added progess bar } DONE
+
+job_recommendation.html { A new page similar to job applications page, but with the addition of "create job link" at the top right side of the page }
+
+recommended_job.html { Added a text below the "Paystack - QA Engineer ( Full-time )" }
+

@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsiveness.css">
+    <link rel="stylesheet" href="/css/animation.css">
+
+    <% include includes/snippets/drift_snippet %>
+    <% include includes/snippets/gtag %> 
+    
+    <title>GetaJobGH - Great Jobs, Great Talents</title>
+
+  </head>
+  <body>
+
+    <div class="mobile_nav">
+        <!-- menu toggler -->
+        <div class="flex_row_center_spaceBetween menu_button_wrapper">
+            <img src="/images/logo.png" alt="">
+            <div class="menu_button menu_button_2">        
+                <div class="bar"></div>        
+                <div class="bar"></div>        
+                <div class="bar"></div>        
+            </div>
+        </div>
+        <!-- menu toggler -->
+        <!-- Links -->
+        <div class="flex_col_align_end mobile_nav_link_container">
+            <div>
+                <a href="#"> Companies </a>
+            </div>
+            <div>
+                    <a href="#"> Candidates </a>
+            </div>
+            <div>
+                    <a href="#"> Assessment </a>
+            </div>
+            <div>
+                    <a href="#"> Post a Job </a>
+            </div>
+            <div>
+                    <a href="#"> Career Advice </a>
+            </div>            
+        </div>
+        <div class="flex_row_align_center_justify_end mobile_nav_btns">
+            <button class="signup">
+                Sign Up
+            </button>
+            <button class="login">
+                Log in
+            </button>
+        </div>
+        <!-- End Links -->
+    </div>
+
+    <nav>
+
+    <div class="site_header">
+
+        <div class="site_container">
+
+            <% include includes/landing_page/landing_page_nav %>
+
+            <div class="ml-auto mobile_menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="row d-flex flex-row align-items-center py-5">
+                <div class="col-md-6 header_left_part">
+
+                    <div class="row">
+                        <div class="col-md-12 header_text">
+                            <h3>
+                                Find a <span> job </span> easily
+                            </h3>            
+                            <p class="pt-4">
+                                With verified, fresh job vacancies directly from recruiters and employers. 
+                                We create a first-class experience for those seeking new job opportunities.
+                            </p>        
+                        </div>
+                        <div class="col-md-12 py-4">
+                            <form action="/jobs/search-job" method="post" >
+                                <div class="input_div flex_row_align_center header_search_field">
+                                    <div class="keyword_input">
+                                        <input type="text" name="keyword" id="keyword" placeholder="Job or skill">
+                                    </div>
+                                    <!--<div class="location_input">
+                                        <input type="text" name="location" id="location" placeholder="Location">
+                                    </div> -->
+                                    <div class="search_btn">
+                                        <button>
+                                            <i class="fas fa-search-location"></i> <span> Search </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="col-md-12 clients">
+                            <p>
+                                Trusted By:
+                            </p>
+
+                            <div class="pt_3">
+                                <div class="clients_logo">
+                                    <div class="">
+                                        <img src="/images/schlumberger_grey_logo.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <img style="margin-bottom:25px;" src="/images/weatherford_grey_logo.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <img style="margin-bottom:25px;" src="/images/fsdh_grey_logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 header_right_img">
+
+                    <div class="header_img">
+                        <img src="/images/landing_page_pic5.jpeg" alt="landing_page pic">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </nav>
+
+    <section class="section_two">
+        <div class="">
+            <div class="site_container">
+                <h3>
+                    Recommended Jobs
+                </h3>
+
+                <div class="pt-5 jobs_slider">
+                    <div class="jobs_slider_wrapper">
+                        <div class="job">
+                            <div class="job_top">
+                                <div class="d-flex flex-row justify-content-end top">
+                                    <span>
+                                        Full time
+                                    </span>
+                                </div>
+
+                                <div class="d-flex flex-row justify-content-center py-5 middle">
+                                    <img src="/images/paystack2.png" alt="">
+                                </div>
+
+                                <div class="d-flex flex-row justify-content-center bottom">
+                                    <h4>
+                                        QA Engineer
+                                    </h4>
+                                </div>        
+                            </div>
+
+                            <div class="job_bottom">
+                                <div class="row">
+                                    <div class="col-sm-12 job_place">
+                                        <h4>
+                                            Paystack
+                                        </h4>
+                                    </div>
+                                </div>  
+                                
+                                <div class="d-flex flex-row justify-content-between align-items-center py-4 bottom_down">
+                                    <div class="loc">
+                                        <p>
+                                            <i class="fas fa-map-marker-alt"></i>    Lagos, Nigeria
+                                        </p>
+                                    </div>
+                                    <div class="apply_link">
+                                        <a href="/login"> Apply now </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="job">
+                                <div class="job_top">
+                                    <div class="d-flex flex-row justify-content-end top">
+                                        <span>
+                                            Part time
+                                        </span>
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center py-5 middle">
+                                        <img src="/images/google2.png" alt="">
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center bottom">
+                                        <h4>
+                                            Product Analyst
+                                        </h4>
+                                    </div>        
+                                </div>
+    
+                                <div class="job_bottom">
+                                    <div class="row">
+                                        <div class="col-sm-12 job_place">
+                                            <h4>
+                                                Google
+                                            </h4>
+                                        </div>
+                                    </div>  
+                                    
+                                    <div class="d-flex flex-row justify-content-between align-items-center py-4 bottom_down">
+                                        <div class="loc">
+                                            <p>
+                                                <i class="fas fa-map-marker-alt"></i>    Lagos, Nigeria
+                                            </p>
+                                        </div>
+                                        <div class="apply_link">
+                                            <a href="/login"> Apply now </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="job">
+                                <div class="job_top">
+                                    <div class="d-flex flex-row justify-content-end top">
+                                        <span>
+                                            Part time
+                                        </span>
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center py-5 middle">
+                                        <img src="/images/flutter.png" alt="">
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center bottom">
+                                        <h4>
+                                            HR Manager
+                                        </h4>
+                                    </div>
+                                </div>
+    
+                                <div class="job_bottom">
+                                    <div class="row">
+                                        <div class="col-sm-12 job_place">
+                                            <h4>
+                                                Flutterwave
+                                            </h4>
+                                        </div>
+                                    </div>  
+                                    
+                                    <div class="d-flex flex-row justify-content-between align-items-center py-4 bottom_down">
+                                        <div class="loc">
+                                            <p>
+                                                <i class="fas fa-map-marker-alt"></i>    Lagos, Nigeria
+                                            </p>
+                                        </div>
+                                        <div class="apply_link">
+                                            <a href="/login"> Apply now </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="job">
+                                <div class="job_top">
+                                    <div class="d-flex flex-row justify-content-end top">
+                                        <span>
+                                            Part time
+                                        </span>
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center py-5 middle">
+                                        <img src="/images/access.png" alt="">
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center bottom">
+                                        <h4>
+                                            QA Engineer
+                                        </h4>
+                                    </div>
+                                </div>
+    
+                                <div class="job_bottom">
+                                    <div class="row">
+                                        <div class="col-sm-12 job_place">
+                                            <h4>
+                                                Flutterwave
+                                            </h4>
+                                        </div>
+                                    </div>  
+                                    
+                                    <div class="d-flex flex-row justify-content-between align-items-center py-4 bottom_down">
+                                        <div class="loc">
+                                            <p>
+                                                <i class="fas fa-map-marker-alt"></i>    Lagos, Nigeria
+                                            </p>
+                                        </div>
+                                        <div class="apply_link">
+                                            <a href="/login"> Apply now </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="job">
+                                <div class="job_top">
+                                    <div class="d-flex flex-row justify-content-end top">
+                                        <span>
+                                            Part time
+                                        </span>
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center py-5 middle">
+                                        <img src="/images/access.png" alt="">
+                                    </div>
+    
+                                    <div class="d-flex flex-row justify-content-center bottom">
+                                            <h4>
+                                                    QA Engineer
+                                            </h4>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="job_bottom">
+                                    <div class="row">
+                                        <div class="col-sm-12 job_place">
+                                            <h4>
+                                                    Flutterwave
+                                            </h4>
+                                        </div>
+                                    </div>  
+                                    
+                                    <div class="d-flex flex-row justify-content-between align-items-center py-4 bottom_down">
+                                        <div class="loc">
+                                            <p>
+                                                    <i class="fas fa-map-marker-alt"></i>    Lagos, Nigeria
+                                            </p>
+                                        </div>
+                                        <div class="apply_link">
+                                            <a href="/login"> Apply now </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </div>                    
+                    
+                </div>
+
+                <div class="d-flex flex-row arr_scroll">
+                        <div class="ml-auto mr-3 back">
+                                <i class="fas fa-long-arrow-alt-left"></i>
+                        </div>
+                        <div class="forward">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section_three">
+        <div>
+
+            <div class="site_container">
+
+                <div class="how_it_works_index">
+                    <div class="p_0">
+
+                        <div class="flex_row_align_center_justify_start staffs_container">
+
+                        <div class="flex_col staff_col_1">
+
+                            <div class="staffs mb_5">
+
+                                <div class="staff_img">
+                                    <img src="/images/img1.png" alt="">
+                                </div>
+
+                                <div class="job_role py_5">
+                                    <p>
+                                        Product Analyst 
+                                        <span>
+                                        @ Paystack
+                                        </span>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="staffs">
+
+                                    <div class="staff_img">
+                                            <img src="/images/img2.png" alt="">
+                                        </div>
+        
+                                        <div class="job_role py_5">
+                                            <p>
+                                                Product Analyst 
+                                                <span>
+                                                @ Paystack
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                </div>
+
+                        </div>
+                        <div class="flex_col staff3">
+                                <div class="staffs mb_3">
+
+                                        <div class="staff_img">
+                                                <img src="/images/img3.png" alt="">
+                                            </div>
+            
+                                            <div class="job_role py_5">
+                                                <p>
+                                                        Securities Trader 
+                                                    <span>
+                                                            @ Mckinnesy
+                                                    </span>
+                                                </p>
+                                            </div>
+
+                                    </div>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div class="d-flex flex-column">
+
+                        <div class="row how_it_works">
+                            <div class="col-md-12 mb-5 how_main_title">
+                                <h3>
+                                    How it works
+                                </h3>
+                                <p class="pt-5">
+                                    Whether you are looking for your first job or looking for a change in career. GetaJobGH helps you find the right job easily 
+                                </p>
+                            </div>
+
+
+                            <div class="col-md-12 mb-4">
+                                <div class="how_title">
+                                    <i class="fas fa-check"></i> <span> Search Jobs </span>
+                                </div>
+                                <div class="how_desc pt-3">
+                                    <p>
+                                        We have jobs in the most popular industries and with top companies. 
+                                        Plus, you can create alerts so you never miss a job opportunity.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-4">
+                                    <div class="how_title">
+                                        <i class="fas fa-check"></i> <span> Create a Profile and Get Noticed </span>
+                                    </div>
+                                    <div class="how_desc pt-3">
+                                        <p>
+                                            Put your best foot forward by creating a professional profile that would get you that dream job. Get noticed by thousands of recruiters.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mb-4">
+                                        <div class="how_title">
+                                            <i class="fas fa-check"></i> <span> Apply for jobs </span>
+                                        </div>
+                                        <div class="how_desc pt-3">
+                                            <p>
+                                                Apply to jobs that fit your work experience qualification and skills. We guarantee your safe and easy experience.
+                                            </p>
+                                        </div>
+                                    </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_four">
+
+        <div class="fouth_section">
+            <div class="site_container">
+
+                <div class="category_title_text text-center">
+
+                    <h3>
+                        Popular Categories
+                    </h3>
+
+                </div>
+
+                <div class="job_categories">
+                    
+
+                    <div class="categories text-center">
+                        <img src="/images/Oil and Gas icon.png" alt="">
+
+                        <h4 class="my-3">
+                             Oil and Gas
+                        </h4>
+
+                        <p>
+                            (20 new jobs )
+                        </p>
+                    </div>
+
+                    <div class="categories text-center">
+                            <img src="/images/Healthcare icon.png" alt="">
+    
+                            <h4 class="my-3">
+                                    Healthcare
+                            </h4>
+    
+                            <p>
+                                (20 new jobs )
+                            </p>
+                        </div>
+
+                    <div class="categories text-center">
+                                <img src="/images/Accounting icon.png" alt="">
+        
+                                <h4 class="my-3">
+                                        Education
+                                </h4>
+        
+                                <p>
+                                    (20 new jobs )
+                                </p>
+                    </div>
+
+                    <div class="categories text-center">
+                            <img src="/images/Accounting icon (1).png" alt="">
+    
+                            <h4 class="my-3">
+                                    Accounting
+                            </h4>
+    
+                            <p>
+                                (20 new jobs )
+                            </p>
+                </div>
+
+                <div class="categories text-center">
+                        <img src="/images/Oil and Gas icon (1).png" alt="">
+
+                        <h4 class="my-3">
+                                Design, Art and Multimedia
+                        </h4>
+
+                        <p>
+                            (20 new jobs )
+                        </p>
+            </div>
+
+            <div class="categories text-center">
+                    <img src="/images/Laptop.png" alt="">
+
+                    <h4 class="my-3">
+                            Technology Security
+                    </h4>
+
+                    <p>
+                        (20 new jobs )
+                    </p>
+        </div>
+
+        <div class="categories text-center">
+                <img src="/images/Security icon.png" alt="">
+
+                <h4 class="my-3">
+                         Security
+                </h4>
+
+                <p>
+                    (20 new jobs )
+                </p>
+    </div>
+
+
+    <div class="categories text-center">
+            <img src="/images/Data Analyst Icon.png" alt="">
+
+            <h4 class="my-3">
+                    Data Analyst
+            </h4>
+
+            <p>
+                (20 new jobs )
+            </p>
+</div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section_five">
+        <div class="fifth_section">
+
+            <div class="site_container">
+
+                <div class="comp_networks">
+                    <div class="comp_networks_desc">
+
+                        <h2>
+                                Over 1000+ jobs from top companies in our network
+                        </h2>
+
+                        <p class="pt_5">
+                            Everyday jobs are posted on our site from various recruiters who have been vetted. We’re committed to accurate, high-quality jobs so you won’t find old duplicated or spammy listings here.
+                        </p>
+
+                        <p class="py_5">
+                            Create job tailored to your specific needs and we’ll deliver new relevant jobs of interest straight to your inbox.
+                        </p>
+
+                        <a href="#"> Learn more <i class="fas fa-long-arrow-alt-right"></i> </a>
+
+                    </div>
+                    <div class="comps_in_network">
+
+                        <img src="/images/ecobank_logo.png" alt="" id="uber">
+                        <img src="/images/one_finance_logo.png" alt="" id="zap">
+                        <img src="/images/fanmilk_logo.png" alt="" id="mobile">
+                        <img src="/images/access_bank_logo.png" alt="" id="google">
+                        <img src="/images/uba_logo.png" alt="" id="acc">
+                        <img src="/images/bw_offshore_logo.png" alt="" id="airtel">
+                        <img src="/images/pg_logo.png" alt="" id="flutter">
+                        <img src="/images/cocacola_logo.png" alt="" id="mc">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section_six">
+
+        <div class="sixth_section">
+
+            <div class="site_container">
+
+                <div class="comment_part_title">
+
+                    <h3>
+                            What are our customers <br> saying
+                    </h3>
+
+                </div>
+
+                <div class="comments">
+
+                    <div class="">
+
+                            <div class="for_comment">
+                                    <img src="/images/coment.png" alt="">
+                            </div>
+
+                    </div>
+                    <div class="">
+
+                            <div class="d-flex flex-row arr_scroll">
+                                    <div class="ml-auto mr-3 back">
+                                            <i class="fas fa-long-arrow-alt-left"></i>
+                                    </div>
+                                    <div class="forward">
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                    </div>
+                            </div>
+
+                        <div class="d-flex flex-column  pl_5 comment_text_div">
+                            <div class="py_4 comment_text">
+                                <p>
+                                        The platform is really convenient to reach out to 
+                                        companies & I have managed  to secure 2 interviews already! 
+                                        I can also track my application status instead of wondering
+                                         whether the company has seen or shortlisted me
+                                </p>
+                            </div>
+
+                            <div class="name_n_role">
+
+                                    <h5>
+                                        Imra Black
+                                    </h5>
+                                    <p>
+                                        HR Manager at MasterCard
+                                    </p>
+        
+                                </div>
+                        </div>
+
+                        
+                            
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section_seven">
+        <div class="seven_section">
+            <div class="site_container">
+
+                <div class="get_started flex_col">
+
+                    <div class="start_info ml_auto">
+                        <h2>
+                                Get a Job you actually like
+                        </h2>
+                        <p class="py_2">
+                                Create an account and start applying
+                        </p>
+
+                        <a href="/register">
+                            <button>
+                                Get Started
+                            </button>
+                        </a>
+                       
+                    </div>
+
+                
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <% include includes/landing_page/footer %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/jQuery.min.js"></script>    
+    <script src="/js/main.js"></script> 
+</body>
+</html>
