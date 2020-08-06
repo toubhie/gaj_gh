@@ -11,7 +11,7 @@ class AzureHelper {
 
     async uploadResumeToAzure(files){
       
-        let fileName = config.docs_sub_container + config.resumes_folder + files.resume.name;
+        let fileName = config.azure_storage_container_name + config.docs_sub_container + config.resumes_folder + files.resume.name;
         let filePath = files.resume.path;
     
         const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
@@ -57,7 +57,7 @@ class AzureHelper {
 
     async uploadAdditionalFilesToAzure(files){
       
-      let fileName = config.docs_sub_container + config.additional_files_folder + files.additional_file.name;
+      let fileName = config.azure_storage_container_name + config.docs_sub_container + config.additional_files_folder + files.additional_file.name;
       let filePath = files.additional_file.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
@@ -74,7 +74,7 @@ class AzureHelper {
 
     async uploadProfilePictureToAzure(files){
       
-      let fileName = config.images_sub_container + config.profile_pictures_folder + files.profile_picture.name;
+      let fileName = config.azure_storage_container_name + config.images_sub_container + config.profile_pictures_folder + files.profile_picture.name;
       let filePath = files.profile_picture.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
@@ -91,7 +91,7 @@ class AzureHelper {
 
     async uploadCompanyLogoToAzure(files){
       
-      let fileName = config.images_sub_container + config.company_logos_folder + files.profile_picture.name;
+      let fileName = config.azure_storage_container_name + config.images_sub_container + config.company_logos_folder + files.profile_picture.name;
       let filePath = files.profile_picture.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
