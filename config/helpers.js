@@ -3,7 +3,6 @@ import db from './../db/database';
 import dateTime from 'node-datetime';
 import config from './config';
 import logger from './log4js';
-import sessionStore from '../config/session_store';
 import moment from 'moment';
 import fs from 'fs';
 import User from '../models/user';
@@ -339,6 +338,8 @@ let helpers = {
 
         return converted_date < current_date ? 'Closed' : this.formatDateTime(date)
     }
+
+    
 }
 
 module.exports = helpers;

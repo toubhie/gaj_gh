@@ -24,9 +24,11 @@ import Job from './models/job';
 import db from './db/database';
 import helpers from './config/helpers';
 import logger from './config/log4js';
-import mailer from './config/mail/mailer'
+import mailer from './config/mail/mailer';
 
-const app = express();
+import AzureHelper from './config/azure_helpers';
+
+const app = express(); 
 
 app.use(cors());
 app.use(bodyparser.json());
@@ -73,6 +75,12 @@ app.get('/faq', function (req, res){
             userAuthenticated: 'false'
         }); 
     }
+});
+
+app.get('/azure-test', function(req, res){
+    let azureHelper = new AzureHelper();
+
+    azureHelper.uploadBlobToAzure2();
 });
 
 app.get('/', function (req, res){

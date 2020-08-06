@@ -16,6 +16,8 @@ import cookieParser from "cookie-parser";
 import Resume from "../models/resume";
 import Job from "../models/job";
 
+import AzureHelper from '../config/azure_helpers';
+
 const router = express.Router();
 
 router.use(cookieParser());
@@ -303,6 +305,84 @@ router.post("/upload-resume", (req, res, next) => {
 
     let form = new formidable.IncomingForm();
     
+   /* form.on('fileBegin', function (name, file){
+        if(file.name != ''){
+            // Check if dir exist. If not create
+            //helpers.checkIfDirectoryExist(config.resume_upload_dir);
+
+            let originalFileExtension = path.extname(file.name).toLowerCase();
+
+            file.name = user.user_id + '_' + user.first_name + '_' + user.last_name + '_resume' +
+                        originalFileExtension;
+
+            file.path = config.resume_upload_dir + file.name;
+        } 
+    });
+
+    form.on('file', function (name, file){
+        if(file.name != ''){     
+            //Upload additional file       
+            logger.log('Uploaded ' + file.name);
+
+            //helpers.copyFile(file.path, config.main_assets_resume_dir);
+        }
+    }); */
+
+    form.parse(req, function(err, fields, files) {
+        if(err) {logger.log(err)}
+        else{
+            logger.log('##### fields #####');
+            logger.log(fields);
+            logger.log('##### files #####');
+            logger.log(files); 
+
+            let azureHelper = new AzureHelper();
+            azureHelper.uploadResumeToAzure(files);
+
+            let user_id = user.user_id;
+            let resume_id = fields.resume_id; 
+            let resume_url = '';  
+
+            if(files.resume.name != ''){
+                resume_url = files.resume.name;
+            }
+
+            let userObj = new User();
+            db.query(userObj.updateResumeFileUrlQuery(user_id, resume_id, resume_url), (err, data) =>{
+                if(err){ 
+                    logger.log(err);
+                    helpers.saveActivityTrail(user_id, "Resume Upload",
+                     "Resume upload failed");
+                    res.redirect('/candidates/profile?q=resume&r=f');
+                }
+                else{            
+                    helpers.saveActivityTrail(user_id, "Resume Upload", "Resume uploaded");
+                    res.redirect('/candidates/profile?q=resume&r=s');
+                }
+            }); 
+        }     
+    });
+
+
+    form.on('error', function (name, file){
+        if(file.name != ''){
+            logger.log('Error Uploading file: ' + file.name);
+        }
+    });
+
+    form.on('progress', function(bytesReceived, bytesExpected) {
+        if(bytesReceived && bytesExpected){
+            let percent_complete = (bytesReceived / bytesExpected) * 100;
+            logger.log(percent_complete.toFixed(2));
+        }        
+    });
+}); 
+
+router.post("/upload-resume-old", (req, res, next) => {
+    let user = req.session.passport.user;
+
+    let form = new formidable.IncomingForm();
+    
     form.on('fileBegin', function (name, file){
         if(file.name != ''){
             // Check if dir exist. If not create
@@ -374,6 +454,123 @@ router.post("/upload-resume", (req, res, next) => {
 }); 
 
 router.post("/upload-profile-picture", (req, res, next) => {
+    let userData = req.session.passport.user;
+
+    let form = new formidable.IncomingForm();
+
+  /*  form.on('fileBegin', function (name, file){
+        if(file.name != ''){
+            // Check if dir exist. If not create
+            //helpers.checkIfDirectoryExist(config.profile_picture_upload_dir);
+
+            let originalFileExtension = path.extname(file.name).toLowerCase();
+
+            file.name = userData.user_id + '_' + userData.first_name + '_' + 
+                        userData.last_name + '_profile_pic' + originalFileExtension;
+
+            file.path = config.profile_picture_upload_dir + file.name;
+        } 
+    });  
+*/
+
+    form.parse(req, function(err, fields, files) {
+        if(err) {logger.log(err)}
+        else{
+
+            let azureHelper = new AzureHelper();
+            azureHelper.uploadProfilePictureToAzure(files);
+
+            let user_id = userData.user_id;
+            let profile_pic_url = '';
+            let full_profile_pic_url = '';
+
+            if(files.profile_picture.name != ''){
+                profile_pic_url = files.profile_picture.name;
+                full_profile_pic_url = config.profile_picture_dir + profile_pic_url;
+            }
+
+            let user = new User();
+            db.query(user.updateProfilePictureUrlQuery(user_id, full_profile_pic_url), (err, data) =>{
+                if(err){ 
+                    logger.log(err);
+                    helpers.saveActivityTrail(user_id, "Profile Picture Upload",
+                     "Profile Picture upload failed");
+
+                    res.status(200).json({
+                        status: 'failed'
+                    });
+
+                }
+                else{            
+                    helpers.saveActivityTrail(user_id, "Profile Picture Upload", "Profile Picture Uploaded");
+                    
+                    /*sessionStore.saveCandidateData(req, user_id, userData.user_uuid, userData.first_name, 
+                        userData.last_name, userData.email, userData.phone_number, userData.user_role, 
+                        userData.is_logged_in, userData.is_activated, userData.resume_id, userData.is_first_login, 
+                        userData.gender, userData.tagline, userData.address, full_profile_pic_url); */
+
+                    //.saveProfilePicture(req, full_profile_pic_url);
+
+                    req.session.passport.user = {
+                        user_id : userData.user_id,
+                        user_uuid : userData.user_uuid,
+                        first_name : userData.first_name,
+                        last_name : userData.last_name,
+                        username : userData.username,
+                        other_name : userData.other_name,
+                        email : userData.email,
+                        phone_number : userData.phone_number,
+                        address : userData.address,
+                        state : userData.state,
+                        country : userData.country,
+                        gender : userData.gender,
+                        dob : userData.dob,
+                        profile_completeness : userData.profile_completeness,
+                        photo_url : full_profile_pic_url,
+                        social_media_id : userData.social_media_id,
+                        company : userData.company,
+                        tagline : userData.tagline,
+                        industry : userData.industry,
+                        password : userData.password,
+                        last_login_time : userData.last_login_time,
+                        last_login_ip_address : userData.last_login_ip_address,
+                        date_created : userData.date_created,
+                        is_activated : userData.is_activated,
+                        is_password_set : userData.is_password_set,
+                        activation_token : userData.activation_token,
+                        invite_token : userData.invite_token,
+                        is_invite_token_active : userData.is_invite_token_active,
+                        is_first_login : userData.is_first_login,
+                        role_id : userData.role_id,
+                        resume_id : userData.resume_id
+                    }
+
+
+                    res.status(200).json({
+                        status: 'success',
+                        message: "Profile picture uploaded.",
+                        photo_url: full_profile_pic_url
+                    });
+                }
+            }); 
+        }     
+    });
+
+    form.on('error', function (name, file){
+        if(file.name != ''){
+            logger.log('Error Uploading file: ' + file.name);
+        }
+    });
+
+    form.on('progress', function(bytesReceived, bytesExpected) {
+        if(bytesReceived && bytesExpected){
+            let percent_complete = (bytesReceived / bytesExpected) * 100;
+            logger.log(percent_complete.toFixed(2));
+        }        
+    });
+}); 
+
+router.post("/upload-profile-picture-old", (req, res, next) => {
     let userData = req.session.passport.user;
 
     let form = new formidable.IncomingForm();

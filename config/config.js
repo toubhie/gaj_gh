@@ -33,6 +33,25 @@ module.exports = {
     "ap_status_recommended"   :     4,
     "ap_status_not_recommended" :   5,
 
+    //Azure Strings
+    "azure_storage_connection_string" : process.env.AZURE_STORAGE_CONNECTION_STRING,
+    "getajobgh_images_azure_storage_container" : "getajobgh_images",
+    "getajobgh_docs_azure_storage_container" : "getajobgh_docs",
+    "azure_storage_container_name" : "getajobgh",
+    "docs_sub_container" : "docs/",
+    "images_sub_container" : "images/",
+    "profile_pictures_folder" : "profile_pictures/",
+    "company_logos_folder" : "company_logos/",
+    "resumes_folder" : "resumes/",
+    "additional_files_folder" : "additional_files/",
+
+    "azure_storage_account_name" : "cilappstorageaccount",
+    "azure_storage_access_key" : "icejvXX2h8y2skvKZ+bF1D9SW5ZJR2cX+e6UO6URXfb05RH8gkwMSjYn+WpNNFkOejqOEhMf3nV0z1gqbUnNFQ==",
+    
+    "one_megabyte" : 1024 * 1024,
+    "four_megabytes" : 4 * 1024 * 1024,
+    "one_minute" : 60 * 1000,
+
     // Session Setting
     "session_secret"           :     "%#*G3tAj0bGh*#%",   
     "session_resave"           :     true,   

@@ -19,6 +19,8 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import bcrypt from 'bcryptjs';
 
+import AzureHelper from '../config/azure_helpers';
+
 const router = express.Router();
 
 router.use(cookieParser());
@@ -1377,10 +1379,11 @@ router.post("/upload-profile-picture", (req, res, next) => {
 
     let form = new formidable.IncomingForm();
 
+    /*
     form.on('fileBegin', function (name, file){
         if(file.name != ''){
             // Check if dir exist. If not create
-            helpers.checkIfDirectoryExist(config.profile_picture_upload_dir);
+            //helpers.checkIfDirectoryExist(config.profile_picture_upload_dir);
 
             let originalFileExtension = path.extname(file.name).toLowerCase();
 
@@ -1390,18 +1393,13 @@ router.post("/upload-profile-picture", (req, res, next) => {
             file.path = config.profile_picture_upload_dir + file.name;
         } 
     });  
-
-    form.on('file', function (name, file){
-        if(file.name != ''){     
-            //Upload additional file       
-            logger.log('Uploaded ' + file.name);
-            helpers.copyFile(file.path, config.main_assets_profile_pic_dir);
-        }
-    });
-
+*/
     form.parse(req, function(err, fields, files) {
         if(err) {logger.log(err)}
         else{
+            let azureHelper = new AzureHelper();
+            azureHelper.uploadProfilePictureToAzure(files);
+
             let profile_pic_url = '';
             let full_profile_pic_url = '';
 
