@@ -35,8 +35,6 @@ module.exports = {
 
     //Azure Strings
     "azure_storage_connection_string" : process.env.AZURE_STORAGE_CONNECTION_STRING,
-    "getajobgh_images_azure_storage_container" : "getajobgh_images",
-    "getajobgh_docs_azure_storage_container" : "getajobgh_docs",
     "azure_storage_container_name" : "getajobgh",
     "docs_sub_container" : "docs/",
     "images_sub_container" : "images/",
@@ -47,6 +45,11 @@ module.exports = {
 
     "azure_storage_account_name" : "cilappstorageaccount",
     "azure_storage_access_key" : "icejvXX2h8y2skvKZ+bF1D9SW5ZJR2cX+e6UO6URXfb05RH8gkwMSjYn+WpNNFkOejqOEhMf3nV0z1gqbUnNFQ==",
+
+    "azure_resume_url" : "https://cilappstorageaccount.blob.core.windows.net/getajobgh/docs/resumes/",
+	"azure_additional_files_url" : "https://cilappstorageaccount.blob.core.windows.net/getajobgh/docs/additional_files/",
+    "azure_profile_pic_url" : "https://cilappstorageaccount.blob.core.windows.net/getajobgh/images/profile_pictures/",
+    "azure_company_logo_url" : "https://cilappstorageaccount.blob.core.windows.net/getajobgh/images/company_logos/",
     
     "one_megabyte" : 1024 * 1024,
     "four_megabytes" : 4 * 1024 * 1024,

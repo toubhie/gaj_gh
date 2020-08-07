@@ -577,7 +577,7 @@ router.post("/processapply", (req, res, next) => {
             let additional_resume_url = '';
 
             if(files.additional_file.name != ''){
-                additional_resume_url = files.additional_file.name;
+                additional_resume_url = config.azure_additional_files_url + files.additional_file.name;
             }
 
             cover_letter = cover_letter.replace("'", "\\'");

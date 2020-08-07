@@ -3,7 +3,6 @@ const {AbortController} = require('@azure/abort-controller');
 const fs = require("fs");
 const path = require("path");
 
-
 import config from './config';
 
 
@@ -11,7 +10,7 @@ class AzureHelper {
 
     async uploadResumeToAzure(files){
       
-        let fileName = config.azure_storage_container_name + config.docs_sub_container + config.resumes_folder + files.resume.name;
+        let fileName = config.docs_sub_container + config.resumes_folder + files.resume.name;
         let filePath = files.resume.path;
     
         const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
@@ -57,7 +56,7 @@ class AzureHelper {
 
     async uploadAdditionalFilesToAzure(files){
       
-      let fileName = config.azure_storage_container_name + config.docs_sub_container + config.additional_files_folder + files.additional_file.name;
+      let fileName = config.docs_sub_container + config.additional_files_folder + files.additional_file.name;
       let filePath = files.additional_file.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
@@ -74,14 +73,14 @@ class AzureHelper {
 
     async uploadProfilePictureToAzure(files){
       
-      let fileName = config.azure_storage_container_name + config.images_sub_container + config.profile_pictures_folder + files.profile_picture.name;
+      let fileName = config.images_sub_container + config.profile_pictures_folder + files.profile_picture.name;
       let filePath = files.profile_picture.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
   
       const blobServiceClient = new BlobServiceClient(`https://${config.azure_storage_account_name}.blob.core.windows.net`, credentials);
   
-      const containerClient = blobServiceClient.getContainerClient(config.getajobgh_images_azure_storage_container);
+      const containerClient = blobServiceClient.getContainerClient(config.azure_storage_container_name);
        
       const aborter = AbortController.timeout(30 * config.one_minute);
   
@@ -91,14 +90,14 @@ class AzureHelper {
 
     async uploadCompanyLogoToAzure(files){
       
-      let fileName = config.azure_storage_container_name + config.images_sub_container + config.company_logos_folder + files.profile_picture.name;
+      let fileName = config.images_sub_container + config.company_logos_folder + files.profile_picture.name;
       let filePath = files.profile_picture.path;
   
       const credentials = new StorageSharedKeyCredential(config.azure_storage_account_name, config.azure_storage_access_key);
   
       const blobServiceClient = new BlobServiceClient(`https://${config.azure_storage_account_name}.blob.core.windows.net`, credentials);
   
-      const containerClient = blobServiceClient.getContainerClient(config.getajobgh_images_azure_storage_container);
+      const containerClient = blobServiceClient.getContainerClient(config.azure_storage_container_name);
        
       const aborter = AbortController.timeout(30 * config.one_minute);
   

@@ -344,7 +344,7 @@ router.post("/upload-resume", (req, res, next) => {
             let resume_url = '';  
 
             if(files.resume.name != ''){
-                resume_url = files.resume.name;
+                resume_url = config.azure_resume_url + files.resume.name;
             }
 
             let userObj = new User();
@@ -486,7 +486,7 @@ router.post("/upload-profile-picture", (req, res, next) => {
 
             if(files.profile_picture.name != ''){
                 profile_pic_url = files.profile_picture.name;
-                full_profile_pic_url = config.profile_picture_dir + profile_pic_url;
+                full_profile_pic_url = config.azure_profile_pic_url + profile_pic_url;
             }
 
             let user = new User();
