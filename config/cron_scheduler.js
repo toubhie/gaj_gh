@@ -1,12 +1,12 @@
-import cron from 'node-cron';
+var cron = require('node-cron');
 
-let cronScheduler = {
+var cronScheduler = {
 
-    scheduleAllJobs : function(){
+    scheduleAllJobs: function() {
         this.scheduleShortlistJob();
     },
 
-    scheduleShortlistJob : function(){
+    scheduleShortlistJob: function() {
         cron.schedule('0 20 * * *', () => {
             console.log('running a task every minute');
         });

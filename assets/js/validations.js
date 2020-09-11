@@ -14,7 +14,7 @@ function validateCandidateRegForm() {
     if(first_name == "") {
         printError("firstNameErr", "Please enter your First Name");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;                
+        var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
         if(regex.test(first_name) === false) {
             printError("firstNameErr", "Please enter a valid name");
         } else {
@@ -27,7 +27,7 @@ function validateCandidateRegForm() {
     if(last_name == "") {
         printError("lastNameErr", "Please enter your Last Name");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;                
+        var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;   
         if(regex.test(last_name) === false) {
             printError("lastNameErr", "Please enter a valid name");
         } else {
@@ -54,7 +54,7 @@ function validateCandidateRegForm() {
     if(phone_number == "") {
         printError("phoneErr", "Please enter your Phone Number");
     } else {
-        var regex = /^[0-9]\d{10}$/;
+        var regex = /^[0-9]\d{9}$/;
         if(regex.test(phone_number) === false) {
             printError("phoneErr", "Please enter a valid 11 digit phone number");
         } else{
@@ -108,7 +108,7 @@ function validateRecruiterRegForm() {
     if(company_name == "") {
         printError("companyNameErr", "Please enter your Company Name");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;                
+        var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
         if(regex.test(company_name) === false) {
             printError("companyNameErr", "Please enter a valid Company Name");
         } else {
@@ -121,7 +121,7 @@ function validateRecruiterRegForm() {
     if(first_name == "") {
         printError("firstNameErr", "Please enter your First Name");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;                
+        var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
         if(regex.test(first_name) === false) {
             printError("firstNameErr", "Please enter a valid name");
         } else {
@@ -134,7 +134,7 @@ function validateRecruiterRegForm() {
     if(last_name == "") {
         printError("lastNameErr", "Please enter your Last Name");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;                
+        var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
         if(regex.test(last_name) === false) {
             printError("lastNameErr", "Please enter a valid name");
         } else {
@@ -161,7 +161,7 @@ function validateRecruiterRegForm() {
     if(phone_number == "") {
         printError("phoneErr", "Please enter your Phone Number");
     } else {
-        var regex = /^[0-9]\d{10}$/;
+        var regex = /^[0-9]\d{9}$/;
         if(regex.test(phone_number) === false) {
             printError("phoneErr", "Please enter a valid 11 digit phone number");
         } else{
@@ -279,7 +279,7 @@ function validateCreatePasswordForm(){
         if(first_name == "") {
             printError("firstNameErr", "Please enter your First Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(first_name) === false) {
                 printError("firstNameErr", "Please enter a valid name");
             } else {
@@ -292,7 +292,7 @@ function validateCreatePasswordForm(){
         if(last_name == "") {
             printError("lastNameErr", "Please enter your Last Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(last_name) === false) {
                 printError("lastNameErr", "Please enter a valid name");
             } else {
@@ -361,7 +361,7 @@ function validateUpdateProfileForm(){
         if(first_name == "") {
             printError("firstNameErr", "Please enter your First Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(first_name) === false) {
                 printError("firstNameErr", "Please enter a valid name");
             } else {
@@ -374,7 +374,7 @@ function validateUpdateProfileForm(){
         if(last_name == "") {
             printError("lastNameErr", "Please enter your Last Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(last_name) === false) {
                 printError("lastNameErr", "Please enter a valid name");
             } else {
@@ -401,7 +401,7 @@ function validateUpdateProfileForm(){
         if(phone_number == "") {
             printError("phoneErr", "Please enter your Phone Number");
         } else {
-            var regex = /^[0-9]\d{10}$/;
+            var regex = /^[0-9]\d{9}$/;
             if(regex.test(phone_number) === false) {
                 printError("phoneErr", "Please enter a valid 11 digit phone number");
             } else{
@@ -456,7 +456,7 @@ function validateUpdateRecruiterProfileForm(){
         if(first_name == "") {
             printError("firstNameErr", "Please enter your First Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(first_name) === false) {
                 printError("firstNameErr", "Please enter a valid name");
             } else {
@@ -469,7 +469,7 @@ function validateUpdateRecruiterProfileForm(){
         if(last_name == "") {
             printError("lastNameErr", "Please enter your Last Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(last_name) === false) {
                 printError("lastNameErr", "Please enter a valid name");
             } else {
@@ -496,7 +496,7 @@ function validateUpdateRecruiterProfileForm(){
         if(phone_number == "") {
             printError("phoneErr", "Please enter your Phone Number");
         } else {
-            var regex = /^[0-9]\d{10}$/;
+            var regex = /^[0-9]\d{9}$/;
             if(regex.test(phone_number) === false) {
                 printError("phoneErr", "Please enter a valid 11 digit phone number");
             } else{
@@ -632,7 +632,7 @@ function validatePostJobForm(job_title, job_type, job_category, location, indust
         } else {
             var regex = /^[0-9]*$/;         
             if(regex.test(min_year_of_experience) === false) {
-                printError("minYearOfExperienceErr", "This field should only contain number");
+                printError("minYearOfExperienceErr", "Min Experience should only contain number");
             } else {
                 printError("minYearOfExperienceErr", "");
                 minYearOfExperienceErr = false;
@@ -643,7 +643,7 @@ function validatePostJobForm(job_title, job_type, job_category, location, indust
         if(max_year_of_experience != "") {
             var regex = /^[0-9]*$/;         
             if(regex.test(max_year_of_experience) === false) {
-                printError("maxYearOfExperienceErr", "This field should only contain number");
+                printError("maxYearOfExperienceErr", "Max Experience field should only contain number");
             } else {
                 printError("maxYearOfExperienceErr", "");
                 maxYearOfExperienceErr = false;
@@ -654,7 +654,7 @@ function validatePostJobForm(job_title, job_type, job_category, location, indust
         if(expected_salary != "") {
             var regex = /^[0-9]*$/;                 
             if(regex.test(expected_salary) === false) {
-                printError("expectedSalaryErr", "This field should only contain number");
+                printError("expectedSalaryErr", "Salary field should only contain number");
             } else {
                 printError("expectedSalaryErr", "");
                 expectedSalaryErr = false;
@@ -675,7 +675,7 @@ function validatePostJobForm(job_title, job_type, job_category, location, indust
         if(minimum_age != "") {
             var regex = /^[0-9]*$/;         
             if(regex.test(minimum_age) === false) {
-                printError("minimumAgeErr", "This field should only contain number");
+                printError("minimumAgeErr", "Min Age field should only contain number");
             } else {
                 printError("minimumAgeErr", "");
                 minimumAgeErr = false;
@@ -686,7 +686,7 @@ function validatePostJobForm(job_title, job_type, job_category, location, indust
         if(maximum_age != "") {
             var regex = /^[0-9]*$/;         
             if(regex.test(maximum_age) === false) {
-                printError("maximumAgeErr", "This field should only contain number");
+                printError("maximumAgeErr", "Max Age field should only contain number");
             } else {
                 printError("maximumAgeErr", "");
                 maximumAgeErr = false;
@@ -757,7 +757,7 @@ function validateCreateAssessmentForm(assessment_name, assessment_type, job_assi
         } else {
             var regex = /^[0-9]*$/;         
             if(regex.test(assessment_time) === false) {
-                printError("assessmentTimeErr", "This field should only contain number (In minutes)");
+                printError("assessmentTimeErr", "Time field should only contain number (In minutes)");
             } else {
                 printError("assessmentTimeErr", "");
                 assessmentTimeErr = false;
@@ -854,7 +854,7 @@ function validateCreateInterviewForm() {
         if(dress_code != "") {
             var regex = /^[a-zA-Z]*$/;         
             if(regex.test(dress_code) === false) {
-                printError("dressCodeErr", "This field should only contain letters");
+                printError("dressCodeErr", "Dress code field should only contain letters");
             } else {
                 printError("dressCodeErr", "");
                 dressCodeErr = false;
@@ -908,7 +908,7 @@ function validateUpdateCompanyProfileForm(company_name, rc_number, company_phone
         if(company_name == "") {
             printError("companyNameErr", "Please enter your Company Name");
         } else {
-            var regex = /^[a-zA-Z\s]+$/;                
+            var regex = /^([a-zA-Z]*)(-[a-zA-Z]*){0,1}+$/;
             if(regex.test(company_name) === false) {
                 printError("companyNameErr", "Please enter a valid Company Name");
             } else {
